@@ -2,7 +2,7 @@
 
 # Create Games 
 The game is published as [Turkey inc](https://unityroom.com/users/turkey_inc29) on unityroom.
-I am in charge of the game program.
+I am creating systems, writing program, etc.
 
 Here are links and repositories to each game.
 
@@ -20,6 +20,9 @@ https://github.com/kannan-xiao4/hopper-man-3d
 
 ## Jinsei wo Bou ni Furu (人生を棒に振る)
 https://github.com/kannan-xiao4/20230625_jinsei_boufuru
+
+## One Button Cooking (1ボタン食堂)
+https://github.com/kannan-xiao4/20230918_cooking_onebutton
 
 <!--
 **kannan-xiao4/kannan-xiao4** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
