@@ -7,22 +7,32 @@ I am creating systems, writing program, etc.
 Here are links and repositories to each game.
 
 ## Hopper Man (2D)
-https://github.com/kannan-xiao4/20170424_gameaweek_hopper
+- Game: https://unityroom.com/games/hopper-man
+- Code: https://github.com/kannan-xiao4/20170424_gameaweek_hopper
 
 ## Toku(徳) Simulator
-https://github.com/kannan-xiao4/20170501_tokuwotsumu
+- Game: https://unityroom.com/games/toku-simulator
+- Code: https://github.com/kannan-xiao4/20170501_tokuwotsumu
 
 ## Shinya Kinmu (深夜勤務) 2
-https://github.com/kannan-xiao4/20210502_shinyakinmu
+- Game: https://unityroom.com/games/shinyakinmu2
+- Code: https://github.com/kannan-xiao4/20210502_shinyakinmu
 
 ## Hopper Man (3D)
-https://github.com/kannan-xiao4/hopper-man-3d
+- Game: https://unityroom.com/games/hopper-man3d
+- Code: https://github.com/kannan-xiao4/hopper-man-3d
 
 ## Jinsei wo Bou ni Furu (人生を棒に振る)
-https://github.com/kannan-xiao4/20230625_jinsei_boufuru
+- Game: https://unityroom.com/games/jinsei-boufuri
+- Code: https://github.com/kannan-xiao4/20230625_jinsei_boufuru
 
 ## One Button Cooking (1ボタン食堂)
-https://github.com/kannan-xiao4/20230918_cooking_onebutton
+- Game: https://unityroom.com/games/onebuttoncooking
+- Code: https://github.com/kannan-xiao4/20230918_cooking_onebutton
+
+## Loading Santa's Presents (俺がプレゼントを積み込むことでサンタが一人、子供のもとへ行ける。俺はそういうことに幸せを感じるんだ。)
+- Game: https://unityroom.com/games/loading-santas-presents
+- Code: https://github.com/kannan-xiao4/20231224_loading_santas_presents
 
 <!--
 **kannan-xiao4/kannan-xiao4** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
