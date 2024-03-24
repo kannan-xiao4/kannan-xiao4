@@ -34,6 +34,10 @@ Here are links and repositories to each game.
 - Game: https://unityroom.com/games/loading-santas-presents
 - Code: https://github.com/kannan-xiao4/20231224_loading_santas_presents
 
+## Santenpo (ガチャ！加工！換金！)
+- Game: https://unityroom.com/games/santenpo
+- Code: https://github.com/kannan-xiao4/20240324_santenpo
+
 <!--
 **kannan-xiao4/kannan-xiao4** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
