@@ -1,0 +1,11 @@
+<svelte:head>
+  <title>Works - Kannan Xiao</title>
+  <meta name="description" content="Kannan Xiao's Works" />
+</svelte:head>
+
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-4">Works</h1>
+  <p class="text-gray-700">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+</div>
