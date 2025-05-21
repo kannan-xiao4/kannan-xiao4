@@ -10,6 +10,7 @@
         <ul class="flex space-x-4 list-none">
           <li><a href="/about" class="hover:text-green-200">About</a></li>
           <li><a href="/works" class="hover:text-green-200">Works</a></li>
+          <li><a href="/portfolio" class="hover:text-green-200">Portfolio</a></li>
         </ul>
       </nav>
     </div>
