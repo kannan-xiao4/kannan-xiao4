@@ -43,6 +43,14 @@ description: 記事の内容を紹介する短い説明。
 
 最初の記事は、既存の`docs/approach.md`の文章を抜粋してまとめたものです。
 
+## 読書記録を更新する
+
+漫画は公開用の読書記録に掲載しません。元の読書記録には残し、公開用原稿への掲載対象から外してください。
+
+`docs/reading.md`を編集すると、独立ページの`docs/reading.html`に反映されます。 Web版は`scripts/reading.mjs`で表紙・著者・感想のカードに変換します。検索と読書状況の絞り込みは`site/assets/reading.js`、表紙の対応と取得元は`site/reading-covers.json`、取得済みの画像は`site/assets/book-covers/`で管理します。本文の二重管理はしません。書籍が未特定の記録に表紙を推測で割り当てず、表紙を掲載できない場合は紹介先のリンクカードを表示します。版が未確定のため、紹介用の表紙と読んだ版は異なる場合があります。ヘッダー・ホーム・READMEから参照でき、ブログの記事一覧やRSSには入りません。
+
+公開するのは書名、著者（必要に応じて原作・作画・監修の役割も明記）、状態、年単位の時期、公開用に整理した感想です。著者は出版社・著者の公式情報や図書館の書誌で確認し、略称などから本を特定できない場合は断定しません。感想は元メモの具体的な内容や評価を残し、短く要約しすぎないようにします。ネタバレは掲載可能です。著者や登場人物など作品に関わる公開名は残し、知人など第三者の個人名やその人を特定できる情報、非公開リンクは本文と差分から除いてください。私的な原文や元データはリポジトリに追加しません。感想のない本に感想を補ったり、未確認の状態を読了に変えたりしません。記録時点の状態と現在の状態、記録の年と読了日も区別します。
+
 ## ローカルで確認する
 
 Node.js 22以上を使用します。
@@ -63,3 +71,20 @@ GitHubのSettings → Pages → Build and deployment → Sourceは「GitHub Acti
 公開URLを変更する場合は`site/config.json`の`origin`（ホスト名まで）と`basePath`（リポジトリ名のパス）を更新します。例えば、ユーザーサイト用の`kannan-xiao4.github.io`リポジトリでは`basePath`を空文字にします。
 
 仕組み: [GitHub Pagesのカスタムワークフロー](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+
+### 読書記録の表紙とリンクカード
+
+`site/reading-covers.json` の `coverRights.status` が `permitted` の画像だけを掲載します。判定のないデータや未確認の画像は、リンク先のfavicon・サイト名を使うカードに切り替わります。アイコンのないサイトは汎用のリンク記号を表示します。国立国会図書館などの書誌情報サイトは、出版社と区別してそのサイト名を表示します。
+
+掲載条件は `coverRights.policyUrl`、確認日は `coverRights.checkedAt`、画像の取得元は `coverSource` に残します。現時点ではopenBD経由の3件と筑摩書房の1件の条件を確認済みです。出版社・書名・著者と出典を表示し、画像をトリミングしません。未確認の表紙画像は配信対象のassetsから除外しました。
+
+faviconはリンク先の識別用に小さく表示します。OGPの画像は自動取得しません。OGP画像を配信していること自体は再利用許諾の根拠にならないため、将来追加する場合も同じ確認を行ってください。openBDデータの更新・削除要請にも対応する必要があります。
+
+公式の確認先（2026-11-01）：
+- openBD: https://openbd.jp/terms/
+- 筑摩書房: https://www.chikumashobo.co.jp/contact/
+- 早川書房: https://www.hayakawa-online.co.jp/contact/service
+- 文藝春秋: https://www.bunshun.co.jp/feedback/shuppanP.htm
+- KADOKAWA: https://help.kadokawa.co.jp/hc/ja/articles/13330121867417
+- 講談社: https://inquiry.kodansha.co.jp/
+- ダイヤモンド社: https://www.diamond.co.jp/legal/index.html
