@@ -15,8 +15,7 @@ const slug = s => s.toLowerCase().replace(/[^\p{L}\p{N}_\-\s]/gu, '').replace(/\
 const docs = [
   { file: 'career', title: '経歴・技術実績', description: 'Unity・C++・WebRTCから、プロダクト開発とチームマネジメントまで。' },
   { file: 'personal-projects', title: '個人制作', description: 'ゲーム、技術サンプル、Webアプリ、開発ツールなどを新しい順に紹介しています。' },
-  { file: 'approach', title: '開発・チーム運営の考え', description: '開発基盤、育成、権限移譲。作り手が本来の仕事に集中できる環境をつくる。' },
-  { file: 'reading', title: '読書記録', description: '技術・組織・マネジメントからSFや漫画まで。読んだ本と、読んでいる本の記録。' }
+  { file: 'approach', title: '開発・チーム運営の考え', description: '開発基盤、育成、権限移譲。作り手が本来の仕事に集中できる環境をつくる。' }
 ];
 function readPost(file) {
   const raw = fs.readFileSync(`posts/${file}`, 'utf8');
@@ -37,7 +36,7 @@ const pages = [];
 fs.rmSync('dist', { recursive: true, force: true });
 fs.mkdirSync('dist/assets', { recursive: true });
 fs.cpSync('site/assets', 'dist/assets', { recursive: true });
-const nav = [['', 'ホーム'], ['docs/career.html', '経歴'], ['docs/personal-projects.html', '個人制作'], ['blog/', 'ブログ'], ['docs/reading.html', '読書記録'], ['links/', 'リンク']];
+const nav = [['', 'ホーム'], ['docs/career.html', '経歴'], ['docs/personal-projects.html', '個人制作'], ['blog/', 'ブログ'], ['links/', 'リンク']];
 function iconLink(name, href, icon) {
   return `<a class="icon-link" href="${esc(href)}" aria-label="${esc(name)}" title="${esc(name)}"><img src="${url(`assets/icons/${icon}`)}" class="service-icon" width="20" height="20" alt="" aria-hidden="true"></a>`;
 }
@@ -102,10 +101,9 @@ const linkRows = config.links.map(link => `<div class="link-row"><h2><a href="${
 const projectPreviews = projects.slice(0, 4).map(project => `<article class="project-preview${project.image ? ' with-image' : ''}"><div><p class="post-date"><time datetime="${project.date}">${project.date.replaceAll('-', '.')}</time><span>${esc(project.category)}</span></p><h3><a href="${esc(project.repository || project.playUrl)}">${esc(project.title)}</a></h3><p>${esc(project.description)}</p></div>${project.image ? `<a href="${esc(project.playUrl)}" aria-label="${esc(project.title)}をunityroomで見る"><img src="${url(`assets/games/${project.image}`)}" width="112" height="112" alt="${esc(project.title)}のゲーム画像" loading="lazy"></a>` : ''}</article>`).join('');
 write('', config.name, config.description, `
 <section class="home-intro"><h1>Takashi Kannan</h1><p class="role"><span>ソフトウェアエンジニア /</span> <span>エンジニアリングマネージャー</span></p><img class="home-illustration" src="${url('assets/torimaru-hero.png')}" width="2172" height="724" alt="モニターやノートが並ぶ作業机に、小さなとりまるがいるイラスト" fetchpriority="high"></section>
-<section class="home-section" aria-labelledby="profile-heading"><h2 id="profile-heading">プロフィール</h2><div class="home-section-content"><p>Unity・C++・WebRTCを軸に、クライアントからWeb・クラウドまで横断して開発してきました。現在はIRIAMで、プロダクト開発とチームマネジメントに取り組んでいます。</p><dl class="page-list">${docs.filter(doc => !['personal-projects', 'reading'].includes(doc.file)).map(doc => `<div><dt><a href="${url(`docs/${doc.file}.html`)}">${doc.title}</a></dt><dd>${doc.description}</dd></div>`).join('')}</dl></div></section>
+<section class="home-section" aria-labelledby="profile-heading"><h2 id="profile-heading">プロフィール</h2><div class="home-section-content"><p>Unity・C++・WebRTCを軸に、クライアントからWeb・クラウドまで横断して開発してきました。現在はIRIAMで、プロダクト開発とチームマネジメントに取り組んでいます。</p><dl class="page-list">${docs.filter(doc => doc.file !== 'personal-projects').map(doc => `<div><dt><a href="${url(`docs/${doc.file}.html`)}">${doc.title}</a></dt><dd>${doc.description}</dd></div>`).join('')}</dl></div></section>
 <section class="home-section" aria-labelledby="works-heading"><h2 id="works-heading">個人制作</h2><div class="home-section-content"><p class="project-date-note">新しいものから掲載。日付はGitHubのリポジトリ作成日です。</p><div class="project-previews">${projectPreviews}</div><a class="section-more" href="${url('docs/personal-projects.html')}">すべての作品</a></div></section>
 <section class="home-section" aria-labelledby="blog-heading"><h2 id="blog-heading">ブログ</h2><div class="home-section-content">${postRows(posts.slice(0,3))}<a class="section-more" href="${url('blog/')}">記事一覧</a></div></section>
-<section class="home-section" aria-labelledby="reading-heading"><h2 id="reading-heading">読書記録</h2><div class="home-section-content"><p>技術や組織・マネジメントの本から、SFや漫画まで。読んだ本と、読んでいる本を年ごとに残しています。</p><a href="${url('docs/reading.html')}">読書記録を読む</a></div></section>
 <section class="home-section" aria-labelledby="links-heading"><h2 id="links-heading">外部リンク</h2><div class="home-section-content"><ul class="inline-links">${config.links.slice(0,3).map(link => `<li><a href="${esc(link.url)}">${esc(link.name)}</a></li>`).join('')}</ul><a class="section-more" href="${url('links/')}">リンク一覧</a></div></section>`);
 for (const doc of docs) {
   const source = fs.readFileSync(`docs/${doc.file}.md`, 'utf8').replace(/^# .*\r?\n/, '').replace(/\[プロフィールに戻る\]\(\.\.\/README\.md\)\r?\n/, '');
