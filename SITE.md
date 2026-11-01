@@ -6,13 +6,19 @@
 
 ## 経歴・制作物・考え方を更新する
 
-既存の`docs/career.md`、`docs/personal-projects.md`、`docs/approach.md`を編集してください。同じMarkdownからWebページを生成するので、GitHub向けとWeb向けに本文を二重管理する必要はありません。Markdown内の相対リンクは生成時にWeb用のURLへ変換されます。
+経歴と考え方は`docs/career.md`、`docs/approach.md`を編集してください。個人制作は`site/projects.json`で管理します。`npm run build`で日付の降順に並べた`docs/personal-projects.md`を生成するため、このMarkdownを直接編集すると上書きされます。同じMarkdownからWebページを生成するので、GitHub向けとWeb向けに本文を二重管理する必要はありません。Markdown内の相対リンクは生成時にWeb用のURLへ変換されます。
 
 トップページの紹介文や構成は`scripts/build.mjs`、色やレイアウトは`site/assets/style.css`で編集できます。外部リンクは`site/config.json`の`links`で管理します。
 
 デザインは白地・青いリンク・システムのゴシック体を基本にしています。プロフィール画像とファビコンは、GitHubの公開プロフィール画像を保存した`site/assets/avatar.png`を使用します。GitHub側で画像を変更した場合は、このファイルも差し替えてください。
 
-全ページで上部の横並びヘッダーを共通で使用します。トップページのイラストは`site/assets/torimaru-hero.png`です。ユーザー提供のとりまるの画像をもとに生成し、プロンプトは`design/torimaru-hero.md`に保存しています。個人制作の画像はトップページの下部に表示します。掲載するゲームは`site/games.json`の順番で管理します。画像は`site/assets/games/`に保存してください。現在の3作品には、それぞれのunityroom公開ページのカバー画像を使い、取得元は`source`に記録しています。画像は外部サイトから毎回読み込まず、サイトと一緒に配信します。
+全ページで上部の横並びヘッダーを共通で使用します。トップページのイラストは`site/assets/torimaru-hero.png`です。ユーザー提供のとりまるの画像をもとに生成し、プロンプトは`design/torimaru-hero.md`に保存しています。トップページの個人制作には、`site/projects.json`の新しいものを4件表示します。画像は`site/assets/games/`に保存し、`image`で指定してください。現在のゲーム画像はunityroom公開ページのカバー画像を使い、取得元は`imageSource`に記録しています。画像は外部サイトから毎回読み込まず、サイトと一緒に配信します。
+
+## 制作物とソーシャルリンク
+
+`site/projects.json`には、タイトル・説明・カテゴリ・日付・GitHub URL・ゲームURLを保存します。GitHubの作成日を日本時間に変換した`date`を基本とし、unityroom投稿日を使う作品には`dateSource`で明記します。公開リポジトリを新しく追加したら、このファイルにも追記してください。ビルド時にGitHubから自動取得はしません。
+
+GitHub・X・LinkedInのURLは`site/config.json`の`links`、アイコンの対応は`socials`で管理します。アイコンはGoogleのMaterial Symbols（`code`、`chat_bubble`、`badge`）をSVGで同梱し、サービス名を添えて表示しています。ブランドロゴではありません。ライセンスは`site/assets/icons/LICENSE.txt`、取得元は同ディレクトリの`NOTICE.md`を参照してください。
 
 ## ブログの記事を追加する
 

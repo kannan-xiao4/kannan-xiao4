@@ -1,0 +1,314 @@
+[
+  {
+    "id": "mvp-template",
+    "title": "MVP開発テンプレート",
+    "date": "2026-09-07",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "テンプレート",
+    "description": "LLMとMVP開発を進めるためのテンプレート。要件・設計・進捗・試用記録と依頼文を整理した構成で、アプリの実装は含んでいません。",
+    "repository": "https://github.com/kannan-xiao4/mvp-template",
+    "archived": false
+  },
+  {
+    "id": "20240324_santenpo",
+    "title": "ガチャ！加工！換金！",
+    "date": "2024-03-24",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム",
+    "description": "現金を物品に変え、加工して換金するゲーム。Unity1週間ゲームジャムの作品としてunityroomで公開しています。",
+    "repository": "https://github.com/kannan-xiao4/20240324_santenpo",
+    "archived": false,
+    "playUrl": "https://unityroom.com/games/santenpo",
+    "image": "santenpo.png",
+    "imageSource": "https://os-worker.unityroom.com/unityroom_production/icon/81632/icon_20240324_113654.png?h=1711247814"
+  },
+  {
+    "id": "config",
+    "title": "開発環境の設定ファイル",
+    "date": "2024-01-13",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "開発環境",
+    "description": "個人で使う設定ファイルのバックアップと環境構築手順。.zshrcなどのシェル設定を管理しています。",
+    "repository": "https://github.com/kannan-xiao4/config",
+    "archived": false
+  },
+  {
+    "id": "20231224_loading_santas_presents",
+    "title": "Loading Santa’s Presents",
+    "date": "2023-12-18",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム",
+    "description": "指定された数のプレゼントをソリに積み込み、サンタを送り出すゲーム。Unity1週間ゲームジャムのお題「おくる」の作品です。",
+    "repository": "https://github.com/kannan-xiao4/20231224_loading_santas_presents",
+    "archived": false,
+    "playUrl": "https://unityroom.com/games/loading-santas-presents",
+    "image": "loading-santas-presents.png",
+    "imageSource": "https://os-worker.unityroom.com/unityroom_production/icon/70406/icon_20231224_113316.png?h=1703385196"
+  },
+  {
+    "id": "20230918_cooking_onebutton",
+    "title": "1ボタン食堂",
+    "date": "2023-09-20",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム",
+    "description": "1ボタンで食材を選び、調理し、提供するゲーム。Unity1週間ゲームジャムのお題「1ボタン」の作品です。",
+    "repository": "https://github.com/kannan-xiao4/20230918_cooking_onebutton",
+    "archived": false,
+    "playUrl": "https://unityroom.com/games/onebuttoncooking",
+    "image": "onebuttoncooking.png",
+    "imageSource": "https://os-worker.unityroom.com/unityroom_production/icon/54233/icon_20230925_224217.png?h=1695649337"
+  },
+  {
+    "id": "20230625_jinsei_boufuru",
+    "title": "人生を棒に振る",
+    "date": "2023-06-25",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム",
+    "description": "Unity1週間ゲームジャムのお題「ふる」で制作したゲーム。Unityのプロジェクトと、unityroomの公開版を掲載しています。",
+    "repository": "https://github.com/kannan-xiao4/20230625_jinsei_boufuru",
+    "archived": false,
+    "playUrl": "https://unityroom.com/games/jinsei-boufuri"
+  },
+  {
+    "id": "hopper-man-3d",
+    "title": "Hopper Man（3D）",
+    "date": "2023-05-04",
+    "dateSource": "unityroom投稿日",
+    "category": "ゲーム",
+    "description": "Hopper Manの3D版。マウスで移動し、クリックでジャンプするゲームとしてunityroomで公開しています。",
+    "playUrl": "https://unityroom.com/games/hopper-man3d",
+    "archived": false
+  },
+  {
+    "id": "minimum-unitynativeplugin",
+    "title": "Unityネイティブプラグインの最小サンプル",
+    "date": "2022-06-30",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "技術サンプル",
+    "description": "C++のネイティブプラグインとUnity側の呼び出しサンプル。CMakeのビルド設定やProfiler用のコードも含みます。",
+    "repository": "https://github.com/kannan-xiao4/minimum-unitynativeplugin",
+    "archived": false
+  },
+  {
+    "id": "simple-webrtc-app",
+    "title": "WebRTC通信アプリのサンプル",
+    "date": "2022-02-11",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "技術サンプル",
+    "description": "Express・WebSocketを使ったシグナリングサーバーと、ブラウザ側の映像送受信クライアントを含むWebRTCサンプル。HTTP・WebSocketやクライアントのテストも収録しています。",
+    "repository": "https://github.com/kannan-xiao4/simple-webrtc-app",
+    "archived": false
+  },
+  {
+    "id": "rails6-blog",
+    "title": "Rails 6のブログアプリ",
+    "date": "2021-08-28",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "Webアプリ",
+    "description": "Rails 6によるブログアプリの試作。記事モデル、コントローラー、一覧・詳細・作成・編集の画面を実装しています。",
+    "repository": "https://github.com/kannan-xiao4/rails6-blog",
+    "archived": false
+  },
+  {
+    "id": "Unity-CreateServicesConfig-For-LicenseServer",
+    "title": "Unityライセンスサーバーの設定生成Action",
+    "date": "2021-06-23",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "開発ツール",
+    "description": "Unityのライセンスサーバー接続用services-config.jsonを生成するGitHub Action。接続先やタイムアウトなどを入力として受け取ります。",
+    "repository": "https://github.com/kannan-xiao4/Unity-CreateServicesConfig-For-LicenseServer",
+    "archived": true
+  },
+  {
+    "id": "hw21-dragoncrasher-githubactions-demo",
+    "title": "Unity × GitHub Actionsのデモ",
+    "date": "2021-06-22",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "技術サンプル",
+    "description": "UnityプロジェクトにGitHub Actionsのワークフローを組み合わせた、開発・ビルド環境のデモリポジトリです。",
+    "repository": "https://github.com/kannan-xiao4/hw21-dragoncrasher-githubactions-demo",
+    "archived": false
+  },
+  {
+    "id": "20210502_shinyakinmu",
+    "title": "深夜勤務 2",
+    "date": "2021-04-30",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム",
+    "description": "Unity1週間ゲームジャムのお題「2」の作品。Unityプロジェクトと、unityroomで遊べる公開版を掲載しています。",
+    "repository": "https://github.com/kannan-xiao4/20210502_shinyakinmu",
+    "archived": false,
+    "playUrl": "https://unityroom.com/games/shinyakinmu2"
+  },
+  {
+    "id": "URS-UnityTransportSignaling",
+    "title": "Unity Transportによるシグナリング",
+    "date": "2021-03-01",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "技術サンプル",
+    "description": "Unity Render StreamingのシグナリングにUnity Transportを使うサンプル。Unityプロジェクトとして公開しています。",
+    "repository": "https://github.com/kannan-xiao4/URS-UnityTransportSignaling",
+    "archived": false
+  },
+  {
+    "id": "UnityEmptyProject",
+    "title": "Unityプロジェクトの初期構成",
+    "date": "2021-01-07",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "テンプレート",
+    "description": "Assets・Packages・ProjectSettingsなど、Unityプロジェクトの初期構成を置いたリポジトリです。",
+    "repository": "https://github.com/kannan-xiao4/UnityEmptyProject",
+    "archived": false
+  },
+  {
+    "id": "robe_entry_cpp",
+    "title": "C++入門の学習コード",
+    "date": "2020-01-13",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "学習",
+    "description": "「ロベールのC++入門講座」の学習リポジトリ。ポインター、クラス、テンプレート、例外処理やデータ構造などのコードをまとめています。",
+    "repository": "https://github.com/kannan-xiao4/robe_entry_cpp",
+    "archived": false
+  },
+  {
+    "id": "opengl-tutorial",
+    "title": "OpenGLの学習コード",
+    "date": "2019-09-08",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "学習",
+    "description": "OpenGLのチュートリアルをもとにした学習記録。C++のウィンドウ処理やシェーダー、GLFW・GLEWを使う構成を含みます。",
+    "repository": "https://github.com/kannan-xiao4/opengl-tutorial",
+    "archived": false
+  },
+  {
+    "id": "M3Online",
+    "title": "M3Online",
+    "date": "2019-07-13",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム試作",
+    "description": "UnityクライアントとGoサーバーを含むオンラインゲームの試作。複数人で同じ部屋の敵を攻撃する仕組みをMVPとして検討したプロジェクトです。",
+    "repository": "https://github.com/kannan-xiao4/M3Online",
+    "archived": false
+  },
+  {
+    "id": "unity-grpc-go-sample",
+    "title": "Unity・gRPC・Goの通信サンプル",
+    "date": "2019-05-28",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "技術サンプル",
+    "description": "UnityクライアントとGoサーバーをつなぐgRPCサンプル。プロトコル定義、サーバー、クライアントのコードをまとめています。",
+    "repository": "https://github.com/kannan-xiao4/unity-grpc-go-sample",
+    "archived": false
+  },
+  {
+    "id": "sample-opennewtab-webgl",
+    "title": "Unity WebGLから別タブを開くサンプル",
+    "date": "2019-03-10",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "技術サンプル",
+    "description": "Unity WebGLからブラウザの別タブを開くための検証プロジェクト。入力したURLを開くUnity側のコードを含みます。",
+    "repository": "https://github.com/kannan-xiao4/sample-opennewtab-webgl",
+    "archived": false
+  },
+  {
+    "id": "go-publish-test",
+    "title": "Oculus Go向けビルド・配布の検証",
+    "date": "2019-03-03",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "技術サンプル",
+    "description": "UnityプロジェクトとOculus Go向けのアップロードスクリプト。モバイルビルドの配布に使うCLIの手順をまとめています。",
+    "repository": "https://github.com/kannan-xiao4/go-publish-test",
+    "archived": false
+  },
+  {
+    "id": "chatbot-docker",
+    "title": "チャットボットの開発環境",
+    "date": "2018-12-14",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "開発環境",
+    "description": "チャットボット開発で使うMySQL・RedisのDocker Compose構成。データ保存用ボリュームや初期化スクリプトを含みます。",
+    "repository": "https://github.com/kannan-xiao4/chatbot-docker",
+    "archived": true
+  },
+  {
+    "id": "chatbot-front",
+    "title": "チャットボットのフロントエンド",
+    "date": "2018-10-13",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "Webアプリ",
+    "description": "Vue・TypeScriptで構成したチャットボットのフロントエンド。Firebaseの設定や開発環境の起動手順をまとめています。",
+    "repository": "https://github.com/kannan-xiao4/chatbot-front",
+    "archived": true
+  },
+  {
+    "id": "chatbot-back",
+    "title": "チャットボットのバックエンド",
+    "date": "2018-10-01",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "Webアプリ",
+    "description": "Go・Ginで構成したチャットボットのバックエンド。外部の対話APIを使う構成と、Firebase・データベース関連のコードを含みます。",
+    "repository": "https://github.com/kannan-xiao4/chatbot-back",
+    "archived": true
+  },
+  {
+    "id": "fenya",
+    "title": "fenya",
+    "date": "2017-09-14",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム",
+    "description": "「みんなの健康を守るのニャ」をテーマにした残業攻撃ゲーム。Unity 2017のプロジェクトとして公開しています。",
+    "repository": "https://github.com/kannan-xiao4/fenya",
+    "archived": false
+  },
+  {
+    "id": "20170701_elderly_home",
+    "title": "Project Elderly Home",
+    "date": "2017-07-01",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム試作",
+    "description": "Unityでのゲーム試作。プレイヤーと敵の行動、攻撃・ダメージ処理、カメラやUIのコードを含みます。",
+    "repository": "https://github.com/kannan-xiao4/20170701_elderly_home",
+    "archived": false
+  },
+  {
+    "id": "20170501_tokuwotsumu",
+    "title": "Toku（徳）Simulator",
+    "date": "2017-05-03",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム",
+    "description": "Unity1週間ゲームジャムのお題「積む」の作品。Unityプロジェクトと、unityroomで遊べる公開版を掲載しています。",
+    "repository": "https://github.com/kannan-xiao4/20170501_tokuwotsumu",
+    "archived": false,
+    "playUrl": "https://unityroom.com/games/toku-simulator"
+  },
+  {
+    "id": "hopper-man-2d",
+    "title": "Hopper Man（2D）",
+    "date": "2017-04-30",
+    "dateSource": "unityroom投稿日",
+    "category": "ゲーム",
+    "description": "跳ね続けるキャラクターを操作するゲーム。着地のタイミングに合わせてジャンプし、より高く跳ねる作品です。",
+    "playUrl": "https://unityroom.com/games/hopper-man",
+    "archived": false
+  },
+  {
+    "id": "20161212_turkey001",
+    "title": "City Defence Game",
+    "date": "2017-01-12",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム試作",
+    "description": "初期のUnityゲーム制作プロジェクト。スポーン、ライフ表示、ゲーム進行やリザルト管理などのコードを公開しています。",
+    "repository": "https://github.com/kannan-xiao4/20161212_turkey001",
+    "archived": false
+  },
+  {
+    "id": "20161212_minigame",
+    "title": "ミニゲームの試作",
+    "date": "2017-01-11",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "ゲーム試作",
+    "description": "Unityによるミニゲームの試作リポジトリ。シーンや起動処理を含むプロジェクトを公開しています。",
+    "repository": "https://github.com/kannan-xiao4/20161212_minigame",
+    "archived": false
+  }
+]

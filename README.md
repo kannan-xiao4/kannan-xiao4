@@ -10,7 +10,7 @@ Unity・C++・WebRTCを軸に、クライアント、サーバー、Web、クラ
 
 - [経歴・技術実績](docs/career.md) — 各社での担当範囲、具体的な取り組み、技術経験。
 - [開発・チーム運営の考え](docs/approach.md) — プロダクト開発、育成・権限移譲、今後広げたい役割。
-- [個人制作](docs/personal-projects.md) — unityroomで公開しているゲーム8作品とソースコード。
+- [個人制作](docs/personal-projects.md) — ゲーム、技術サンプル、Webアプリ、開発ツールとソースコード。
 
 ## これまでの仕事
 

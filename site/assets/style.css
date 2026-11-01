@@ -120,13 +120,6 @@ footer small { font-size: inherit; }
 .wordmark img { width: 28px; height: 28px; border-radius: 50%; }
 .home-intro h1 { margin-bottom: 6px; }
 .home-illustration { display: block; width: 100%; height: auto; margin-top: 24px; }
-.game-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
-.game-figure { margin: 0; min-width: 0; }
-.game-image { display: block; background: #f6f8fa; }
-.game-image img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
-.game-image:hover { outline: 2px solid var(--link); outline-offset: 3px; }
-.game-figure figcaption { display: flex; flex-direction: column; gap: 2px; padding-top: 10px; font-size: 13px; line-height: 1.6; }
-.game-figure figcaption span { font-size: 12px; color: var(--muted); }
 .home-section { border-top: 1px solid var(--line); padding-top: 28px; margin-top: 36px; }
 .home-section h2 { font-size: 20px; }
 .home-section-content > :first-child { margin-top: 0; }
@@ -135,7 +128,20 @@ footer small { font-size: inherit; }
 .home-section-content > p:not(.role) { font-size: 15px; margin-block: 20px 24px; }
 .section-more { display: inline-block; margin-top: 24px; font-size: 14px; }
 
+/* Material Symbols, paired with labels rather than used as brand logos. */
+.material-icon { flex: none; width: 18px; height: 18px; fill: currentColor; }
+.social-links { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+.social-links a { display: inline-flex; align-items: center; gap: 5px; }
+.header .social-links { flex-basis: 100%; justify-content: flex-end; gap: 16px; font-size: 12px; }
+.project-date-note { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.project-preview { padding-block: 22px; }
+.project-preview + .project-preview { border-top: 1px solid var(--line); }
+.project-preview.with-image { display: grid; grid-template-columns: minmax(0, 1fr) 112px; gap: 24px; }
+.project-preview h3 { font-size: 16px; margin: 0 0 8px; }
+.project-preview p:not(.post-date) { font-size: 14px; color: var(--muted); margin: 0; }
+.project-preview img { display: block; width: 112px; height: 112px; object-fit: contain; }
 @media (max-width: 600px) {
-  .game-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
-  .game-figure figcaption { font-size: 12px; }
+  .header .social-links { margin-top: 12px; justify-content: flex-start; }
+  .project-preview.with-image { grid-template-columns: minmax(0, 1fr) 88px; gap: 16px; }
+  .project-preview img { width: 88px; height: 88px; }
 }

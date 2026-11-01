@@ -28,6 +28,30 @@
       "name": "Unity Render Streaming",
       "url": "https://github.com/Unity-Technologies/UnityRenderStreaming",
       "description": "開発に携わった、Unityとブラウザ等をつなぐ映像・音声ストリーミング。"
+    },
+    {
+      "name": "X",
+      "url": "https://x.com/kannan_xiao4",
+      "description": "開発や日々の活動についての投稿。"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/takashi-kannan/",
+      "description": "職務経歴とプロフェッショナルプロフィール。"
+    }
+  ],
+  "socials": [
+    {
+      "name": "GitHub",
+      "icon": "code"
+    },
+    {
+      "name": "X",
+      "icon": "chat_bubble"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "badge"
     }
   ]
 }
