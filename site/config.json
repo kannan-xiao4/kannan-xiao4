@@ -1,0 +1,13 @@
+{
+  "name": "Takashi Kannan",
+  "origin": "https://kannan-xiao4.github.io",
+  "basePath": "/kannan-xiao4",
+  "description": "ソフトウェアエンジニア / エンジニアリングマネージャー。プロダクト開発とチームづくりの記録。",
+  "links": [
+    { "name": "GitHub", "url": "https://github.com/kannan-xiao4", "label": "CODE & PROJECTS", "description": "個人制作のソースコードや、開発に関する活動。" },
+    { "name": "Gists", "url": "https://gist.github.com/kannan-xiao4", "label": "SNIPPETS & NOTES", "description": "技術メモと、小さなコードの断片。" },
+    { "name": "unityroom", "url": "https://unityroom.com/users/turkey_inc29", "label": "PLAY THE GAMES", "description": "Turkey incとして公開している、個人制作のゲーム。" },
+    { "name": "Unity WebRTC", "url": "https://github.com/Unity-Technologies/com.unity.webrtc", "label": "CONTRIBUTED TO", "description": "開発に携わった、Unity向けのWebRTCパッケージ。" },
+    { "name": "Unity Render Streaming", "url": "https://github.com/Unity-Technologies/UnityRenderStreaming", "label": "CONTRIBUTED TO", "description": "開発に携わった、Unityとブラウザ等をつなぐ映像・音声ストリーミング。" }
+  ]
+}
