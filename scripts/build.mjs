@@ -37,10 +37,13 @@ fs.rmSync('dist', { recursive: true, force: true });
 fs.mkdirSync('dist/assets', { recursive: true });
 fs.cpSync('site/assets', 'dist/assets', { recursive: true });
 const nav = [['', 'ホーム'], ['docs/career.html', '経歴'], ['docs/personal-projects.html', '個人制作'], ['blog/', 'ブログ'], ['links/', 'リンク']];
+function iconLink(name, href, icon) {
+  return `<a class="icon-link" href="${esc(href)}" aria-label="${esc(name)}" title="${esc(name)}"><img src="${url(`assets/icons/${icon}`)}" class="service-icon" width="20" height="20" alt="" aria-hidden="true"></a>`;
+}
+const rssLink = iconLink('RSS', url('feed.xml'), 'rss.svg');
 const socialLinks = config.socials.map(social => {
-  const link = config.links.find(link => link.name === social.name);
-  const icon = fs.readFileSync(`site/assets/icons/${social.icon}.svg`, 'utf8').replace('<svg ', '<svg class="material-icon" aria-hidden="true" focusable="false" ');
-  return `<a href="${esc(link.url)}">${icon}<span>${esc(link.name)}</span></a>`;
+  const href = social.name === 'RSS' ? url('feed.xml') : config.links.find(link => link.name === social.name).url;
+  return iconLink(social.name, href, social.icon);
 }).join('');
 function shell(title, description, route, content, active = route) {
   const home = route === '';
@@ -51,7 +54,7 @@ function shell(title, description, route, content, active = route) {
 <link rel="canonical" href="${absolute(route)}"><meta property="og:type" content="${route.startsWith('blog/') && route !== 'blog/' ? 'article' : 'website'}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${absolute(route)}"><meta property="og:locale" content="ja_JP">
 <link rel="icon" href="${url('assets/avatar.png')}" type="image/png"><link rel="stylesheet" href="${url('assets/style.css')}"><link rel="alternate" type="application/rss+xml" title="${config.name} Blog" href="${url('feed.xml')}"></head>
 <body${home ? ' class="home"' : ''}><a class="skip" href="#main">本文へスキップ</a><header class="header"><a class="wordmark" href="${url()}">${identity}</a><nav aria-label="メインナビゲーション">${nav.map(([p,label]) => `<a href="${url(p)}"${p === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav><nav class="social-links" aria-label="ソーシャルプロフィール">${socialLinks}</nav></header>
-<main id="main">${content}</main><footer><small>© ${new Date().getFullYear()} Takashi Kannan</small><div class="footer-links social-links">${socialLinks}<a href="${url('feed.xml')}">RSS</a></div></footer></body></html>`;
+<main id="main">${content}</main><footer><small>© ${new Date().getFullYear()} Takashi Kannan</small><div class="footer-links social-links">${socialLinks}</div></footer></body></html>`;
 }
 function write(route, title, description, content, active) {
   const target = `dist/${route.endsWith('/') || !route ? `${route}index.html` : route}`;
@@ -107,7 +110,7 @@ for (const doc of docs) {
   const { html, headings } = render(source, `docs/${doc.file}.md`);
   write(`docs/${doc.file}.html`, doc.title, doc.description, `<div class="page-heading"><h1>${doc.title}</h1></div><details class="toc"><summary>目次</summary><nav aria-label="ページ内の目次">${headings.map(h => `<a href="#${esc(h.id)}">${esc(h.title)}</a>`).join('')}</nav></details><article class="prose">${html}</article>`);
 }
-write('blog/', 'ブログ', '開発・チーム運営・学びについての記録。', `<div class="page-heading"><h1>ブログ</h1><p>開発・チーム運営・学びについての記録。</p><a href="${url('feed.xml')}">RSS</a></div><section class="post-list" aria-label="記事一覧">${postRows(posts)}</section>`);
+write('blog/', 'ブログ', '開発・チーム運営・学びについての記録。', `<div class="page-heading"><h1>ブログ</h1><p>開発・チーム運営・学びについての記録。</p>${rssLink}</div><section class="post-list" aria-label="記事一覧">${postRows(posts)}</section>`);
 for (const p of posts) {
   const { html } = render(p.body, p.source);
   write(`blog/${p.file}.html`, p.title, p.description, `<div class="page-heading article-heading"><a class="back" href="${url('blog/')}">← 記事一覧</a><p class="post-date"><time datetime="${p.date}">${p.date.replaceAll('-', '.')}</time><span>${esc(p.category)}</span></p><h1>${esc(p.title)}</h1><p>${esc(p.description)}</p></div><article class="prose blog-prose">${html}<div class="article-end"><p>Takashi Kannan</p><a href="${url('blog/')}">← 記事一覧へ</a></div></article>`, 'blog/');

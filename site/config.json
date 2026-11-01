@@ -43,15 +43,19 @@
   "socials": [
     {
       "name": "GitHub",
-      "icon": "code"
+      "icon": "github.svg"
     },
     {
       "name": "X",
-      "icon": "chat_bubble"
+      "icon": "x.png"
     },
     {
       "name": "LinkedIn",
-      "icon": "badge"
+      "icon": "linkedin.png"
+    },
+    {
+      "name": "RSS",
+      "icon": "rss.svg"
     }
   ]
 }

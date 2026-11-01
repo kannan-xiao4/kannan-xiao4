@@ -18,7 +18,7 @@
 
 `site/projects.json`には、タイトル・説明・カテゴリ・日付・GitHub URL・ゲームURLを保存します。GitHubの作成日を日本時間に変換した`date`を基本とし、unityroom投稿日を使う作品には`dateSource`で明記します。公開リポジトリを新しく追加したら、このファイルにも追記してください。ビルド時にGitHubから自動取得はしません。
 
-GitHub・X・LinkedInのURLは`site/config.json`の`links`、アイコンの対応は`socials`で管理します。アイコンはGoogleのMaterial Symbols（`code`、`chat_bubble`、`badge`）をSVGで同梱し、サービス名を添えて表示しています。ブランドロゴではありません。ライセンスは`site/assets/icons/LICENSE.txt`、取得元は同ディレクトリの`NOTICE.md`を参照してください。
+GitHub・X・LinkedInのURLは`site/config.json`の`links`、アイコンの対応は`socials`で管理します。GitHub・X・LinkedInは公式配布のブランドアイコン、RSSはMaterial Symbolsのフィード記号を使います。ヘッダー・フッターとブログのRSSリンクはアイコンだけを表示し、`aria-label`と`title`でリンク名を付けています。各素材の取得元は`site/assets/icons/NOTICE.md`、RSS記号のライセンスは同ディレクトリの`LICENSE.txt`を参照してください。
 
 ## ブログの記事を追加する
 

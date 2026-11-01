@@ -128,11 +128,13 @@ footer small { font-size: inherit; }
 .home-section-content > p:not(.role) { font-size: 15px; margin-block: 20px 24px; }
 .section-more { display: inline-block; margin-top: 24px; font-size: 14px; }
 
-/* Material Symbols, paired with labels rather than used as brand logos. */
-.material-icon { flex: none; width: 18px; height: 18px; fill: currentColor; }
-.social-links { display: flex; flex-wrap: wrap; gap: 12px 20px; }
-.social-links a { display: inline-flex; align-items: center; gap: 5px; }
-.header .social-links { flex-basis: 100%; justify-content: flex-end; gap: 16px; font-size: 12px; }
+/* Original brand marks; link names are supplied to assistive technology. */
+.service-icon { display: block; width: 20px; height: 20px; object-fit: contain; }
+.social-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.icon-link, .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex: none; text-decoration: none; border-radius: 4px; }
+.icon-link:hover { background: #f6f8fa; }
+.header .social-links { flex-basis: 100%; justify-content: flex-end; gap: 8px; }
+footer { align-items: center; }
 .project-date-note { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 .project-preview { padding-block: 22px; }
 .project-preview + .project-preview { border-top: 1px solid var(--line); }
