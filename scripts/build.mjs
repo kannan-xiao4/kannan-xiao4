@@ -36,7 +36,7 @@ fs.cpSync('site/assets', 'dist/assets', { recursive: true });
 const nav = [['', 'ホーム'], ['docs/career.html', '経歴'], ['docs/personal-projects.html', '個人制作'], ['blog/', 'ブログ'], ['links/', 'リンク']];
 function shell(title, description, route, content, active = route) {
   const home = route === '';
-  const identity = home ? `<img src="${url('assets/avatar.png')}" width="40" height="40" alt="GitHubのプロフィール画像"><span>Takashi Kannan</span>` : 'Takashi Kannan';
+  const identity = `<img src="${url('assets/avatar.png')}" width="40" height="40" alt="GitHubのプロフィール画像"><span>Takashi Kannan</span>`;
   return `<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title === config.name ? title : `${title} — ${config.name}`)}</title><meta name="description" content="${esc(description)}">
@@ -90,8 +90,9 @@ const linkRows = config.links.map(link => `<div class="link-row"><h2><a href="${
 const games = JSON.parse(fs.readFileSync('site/games.json', 'utf8'));
 const gameFigure = (game, primary = false) => `<figure class="game-figure${primary ? ' primary-game' : ''}"><a class="game-image" href="${esc(game.url)}" aria-label="${esc(game.title)}をunityroomで見る"><img src="${url(`assets/games/${game.image}`)}" width="512" height="512" alt="${esc(game.title)}のゲーム画像"${primary ? ' fetchpriority="high"' : ''}></a><figcaption><a href="${esc(game.url)}">${esc(game.title)}</a><span>${game.year} / Unity</span></figcaption></figure>`;
 write('', config.name, config.description, `
-<section class="featured" aria-labelledby="works-heading"><div class="section-heading"><h1 id="works-heading">個人制作</h1><a href="${url('docs/personal-projects.html')}">すべての作品</a></div><div class="game-gallery">${gameFigure(games[0], true)}<div class="other-games">${games.slice(1).map(g => gameFigure(g)).join('')}</div></div></section>
-<section class="home-section" aria-labelledby="profile-heading"><h2 id="profile-heading">プロフィール</h2><div class="home-section-content"><h3>Takashi Kannan</h3><p class="role"><span>ソフトウェアエンジニア /</span> <span>エンジニアリングマネージャー</span></p><p>Unity・C++・WebRTCを軸に、クライアントからWeb・クラウドまで横断して開発してきました。現在はIRIAMで、プロダクト開発とチームマネジメントに取り組んでいます。</p><dl class="page-list">${docs.filter(doc => doc.file !== 'personal-projects').map(doc => `<div><dt><a href="${url(`docs/${doc.file}.html`)}">${doc.title}</a></dt><dd>${doc.description}</dd></div>`).join('')}</dl></div></section>
+<section class="home-intro"><h1>Takashi Kannan</h1><p class="role"><span>ソフトウェアエンジニア /</span> <span>エンジニアリングマネージャー</span></p><img class="home-illustration" src="${url('assets/torimaru-hero.png')}" width="2172" height="724" alt="モニターやノートが並ぶ作業机に、小さなとりまるがいるイラスト" fetchpriority="high"></section>
+<section class="home-section" aria-labelledby="profile-heading"><h2 id="profile-heading">プロフィール</h2><div class="home-section-content"><p>Unity・C++・WebRTCを軸に、クライアントからWeb・クラウドまで横断して開発してきました。現在はIRIAMで、プロダクト開発とチームマネジメントに取り組んでいます。</p><dl class="page-list">${docs.filter(doc => doc.file !== 'personal-projects').map(doc => `<div><dt><a href="${url(`docs/${doc.file}.html`)}">${doc.title}</a></dt><dd>${doc.description}</dd></div>`).join('')}</dl></div></section>
+<section class="home-section" aria-labelledby="works-heading"><h2 id="works-heading">個人制作</h2><div class="home-section-content"><div class="game-gallery">${games.map(g => gameFigure(g)).join('')}</div><a class="section-more" href="${url('docs/personal-projects.html')}">すべての作品</a></div></section>
 <section class="home-section" aria-labelledby="blog-heading"><h2 id="blog-heading">ブログ</h2><div class="home-section-content">${postRows(posts.slice(0,3))}<a class="section-more" href="${url('blog/')}">記事一覧</a></div></section>
 <section class="home-section" aria-labelledby="links-heading"><h2 id="links-heading">外部リンク</h2><div class="home-section-content"><ul class="inline-links">${config.links.slice(0,3).map(link => `<li><a href="${esc(link.url)}">${esc(link.name)}</a></li>`).join('')}</ul><a class="section-more" href="${url('links/')}">リンク一覧</a></div></section>`);
 for (const doc of docs) {
