@@ -1,5 +1,15 @@
 [
   {
+    "id": "cosense-reference",
+    "title": "Cosense MCP on Sites",
+    "date": "2026-11-04",
+    "dateSource": "GitHubリポジトリ作成日",
+    "category": "AI・開発ツール",
+    "description": "Cosense（旧Scrapbox）の検索・参照・編集をChatGPTから行うMCPサーバーの参考実装。TypeScript・Cloudflare WorkersとSitesの認証・プラグイン連携を使い、編集のプレビュー・確定処理、テスト、構成の解説と再現手順をまとめています。",
+    "repository": "https://github.com/kannan-xiao4/cosense-reference",
+    "archived": false
+  },
+  {
     "id": "mvp-template",
     "title": "MVP開発テンプレート",
     "date": "2026-09-07",

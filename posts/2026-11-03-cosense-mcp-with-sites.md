@@ -76,3 +76,11 @@ ChatGPTから呼び出すためのMCPと、Cosense側を操作するためのCLI
 MCPサーバーを作れたこと自体もうれしいですが、それが普段の記録の付け方につながったのが、今回いちばんよかったところかもしれません。
 
 こういう使い方もできるんだ、ということを、自分のやったことの記録として残しておきます。
+
+## 参考実装
+
+今回のMCPサーバーを参考にできるよう、実装と再現手順を[cosense-reference](https://github.com/kannan-xiao4/cosense-reference)にまとめています。
+
+Sites上で動かすTypeScript・Cloudflare Workersのコードに加え、[構成と設計の説明](https://github.com/kannan-xiao4/cosense-reference/blob/main/docs/architecture.md)と[自分用に動かすための手順](https://github.com/kannan-xiao4/cosense-reference/blob/main/docs/sites-setup.md)も置いています。既定は読み取り専用で、書き込みを有効にした場合は、変更のプレビューと確定を分ける構成です。
+
+自分用に使うには、別の所有者専用SiteとCosenseの認証情報を設定します。Sitesの認証ゲートウェイを前提とした参考実装なので、利用できる環境や設定の詳細はリポジトリのREADMEを参照してください。

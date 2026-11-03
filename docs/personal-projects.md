@@ -10,6 +10,14 @@
 
 ## 2026年
 
+### Cosense MCP on Sites
+
+**2026-11-04** · AI・開発ツール
+
+Cosense（旧Scrapbox）の検索・参照・編集をChatGPTから行うMCPサーバーの参考実装。TypeScript・Cloudflare WorkersとSitesの認証・プラグイン連携を使い、編集のプレビュー・確定処理、テスト、構成の解説と再現手順をまとめています。
+
+[GitHub](https://github.com/kannan-xiao4/cosense-reference)
+
 ### MVP開発テンプレート
 
 **2026-09-07** · テンプレート

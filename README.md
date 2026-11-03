@@ -21,6 +21,11 @@ Unity・C++・WebRTCを軸に、クライアント、サーバー、Web、クラ
 - **Unity Technologies Japan**：Unity WebRTC / Unity Render Streamingの開発。映像デコーダー、Unity Profiler統合、シグナリング、サンプルや導入環境の整備に携わりました。
 - それ以前は、クラスターでのSDK開発、テクロスでのゲーム開発、グンゼでの電子部品開発に携わっていました。
 
+## 個人制作
+
+- [Cosense MCP on Sites](https://github.com/kannan-xiao4/cosense-reference) — Cosenseの検索・参照・編集をChatGPTにつなぐMCPサーバーの参考実装。Sites・Cloudflare Workersを使った構成と再現手順をまとめています。
+- [個人制作一覧](docs/personal-projects.md) — ゲーム、技術サンプル、Webアプリ、開発ツール。
+
 ## 公開されている開発・活動
 
 - [Unity WebRTC](https://github.com/Unity-Technologies/com.unity.webrtc) — Unity向けのWebRTCパッケージ。
