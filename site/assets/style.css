@@ -7,7 +7,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-padding-top: 24px; }
+html { scroll-padding-top: 100px; }
 body {
   margin: 0;
   background: #fff;
@@ -27,6 +27,10 @@ a:hover { text-decoration-thickness: 2px; }
 a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 .header, main, footer { width: min(100% - 48px, 800px); margin-inline: auto; }
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -38,9 +42,10 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline
 .wordmark { color: var(--text); font-size: 15px; font-weight: 600; text-decoration: none; }
 .header nav { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; }
 .header nav a { text-decoration: none; }
+.nav-label-short { display: none; }
 .header nav a:hover { text-decoration: underline; }
 .header nav a[aria-current='page'] { color: var(--text); font-weight: 600; }
-.skip { position: fixed; top: -100px; left: 16px; padding: 8px 16px; background: #fff; z-index: 1; }
+.skip { position: fixed; top: -100px; left: 16px; padding: 8px 16px; background: #fff; z-index: 2; }
 .skip:focus { top: 8px; }
 main { padding-block: 40px 56px; }
 h1, h2, h3 { font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; }
@@ -103,8 +108,18 @@ footer small { font-size: inherit; }
 
 @media (max-width: 600px) {
   .header, main, footer { width: calc(100% - 40px); }
-  .header { display: block; padding-block: 20px 16px; }
-  .header nav { gap: 8px 20px; margin-top: 12px; }
+  .header { flex-wrap: nowrap; gap: 10px; padding-block: 20px 16px; }
+  .header .wordmark { flex: none; padding-inline-end: 10px; border-inline-end: 1px solid var(--line); }
+  .header .wordmark span, .header .nav-home, .nav-label-full { display: none; }
+  .nav-label-short { display: inline; }
+  .header nav {
+    flex: 1;
+    flex-wrap: nowrap;
+    gap: 0;
+    font-size: .8125rem;
+    white-space: nowrap;
+  }
+  .header nav a { flex: 1; text-align: center; }
   main { padding-block: 32px 40px; }
   h1 { font-size: 25px; }
   .profile-heading { gap: 14px; align-items: flex-start; }
@@ -131,9 +146,8 @@ footer small { font-size: inherit; }
 /* Original brand marks; link names are supplied to assistive technology. */
 .service-icon { display: block; width: 20px; height: 20px; object-fit: contain; }
 .social-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.icon-link, .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex: none; text-decoration: none; border-radius: 4px; }
+.icon-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex: none; text-decoration: none; border-radius: 4px; }
 .icon-link:hover { background: #f6f8fa; }
-.header .social-links { flex-basis: 100%; justify-content: flex-end; gap: 8px; }
 footer { align-items: center; }
 .project-date-note { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 .project-preview { padding-block: 22px; }
@@ -143,7 +157,6 @@ footer { align-items: center; }
 .project-preview p:not(.post-date) { font-size: 14px; color: var(--muted); margin: 0; }
 .project-preview img { display: block; width: 112px; height: 112px; object-fit: contain; }
 @media (max-width: 600px) {
-  .header .social-links { margin-top: 12px; justify-content: flex-start; }
   .project-preview.with-image { grid-template-columns: minmax(0, 1fr) 88px; gap: 16px; }
   .project-preview img { width: 88px; height: 88px; }
 }

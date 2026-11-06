@@ -38,7 +38,13 @@ const pages = [];
 fs.rmSync('dist', { recursive: true, force: true });
 fs.mkdirSync('dist/assets', { recursive: true });
 fs.cpSync('site/assets', 'dist/assets', { recursive: true });
-const nav = [['', 'ホーム'], ['docs/career.html', '経歴'], ['docs/personal-projects.html', '個人制作'], ['blog/', 'ブログ'], ['docs/reading.html', '読書記録'], ['links/', 'リンク']];
+const nav = [
+  ['', 'ホーム'],
+  ['docs/career.html', '経歴'],
+  ['docs/personal-projects.html', '個人制作', '制作'],
+  ['blog/', 'ブログ'],
+  ['docs/reading.html', '読書記録', '読書'],
+];
 function iconLink(name, href, icon) {
   return `<a class="icon-link" href="${esc(href)}" aria-label="${esc(name)}" title="${esc(name)}"><img src="${url(`assets/icons/${icon}`)}" class="service-icon" width="20" height="20" alt="" aria-hidden="true"></a>`;
 }
@@ -55,8 +61,8 @@ function shell(title, description, route, content, active = route) {
 <title>${esc(title === config.name ? title : `${title} — ${config.name}`)}</title><meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${absolute(route)}"><meta property="og:type" content="${route.startsWith('blog/') && route !== 'blog/' ? 'article' : 'website'}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${absolute(route)}"><meta property="og:locale" content="ja_JP">
 <link rel="icon" href="${url('assets/avatar.png')}" type="image/png"><link rel="stylesheet" href="${url('assets/style.css')}"><link rel="alternate" type="application/rss+xml" title="${config.name} Blog" href="${url('feed.xml')}"></head>
-<body${home ? ' class="home"' : ''}><a class="skip" href="#main">本文へスキップ</a><header class="header"><a class="wordmark" href="${url()}">${identity}</a><nav aria-label="メインナビゲーション">${nav.map(([p,label]) => `<a href="${url(p)}"${p === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav><nav class="social-links" aria-label="ソーシャルプロフィール">${socialLinks}</nav></header>
-<main id="main">${content}</main><footer><small>© ${new Date().getFullYear()} Takashi Kannan</small><div class="footer-links social-links">${socialLinks}</div></footer></body></html>`;
+<body${home ? ' class="home"' : ''}><a class="skip" href="#main">本文へスキップ</a><header class="header"><a class="wordmark" href="${url()}" aria-label="${esc(config.name)} ホーム">${identity}</a><nav aria-label="メインナビゲーション">${nav.map(([path, label, shortLabel]) => `<a href="${url(path)}"${path === '' ? ' class="nav-home"' : ''}${path === active ? ' aria-current="page"' : ''}>${shortLabel ? `<span class="nav-label-full">${label}</span><span class="nav-label-short">${shortLabel}</span>` : label}</a>`).join('')}</nav></header>
+<main id="main">${content}</main><footer><small>© ${new Date().getFullYear()} Takashi Kannan</small><div class="footer-links social-links"><a href="${url('links/')}"${active === 'links/' ? ' aria-current="page"' : ''}>リンク一覧</a>${socialLinks}</div></footer></body></html>`;
 }
 function write(route, title, description, content, active) {
   const target = `dist/${route.endsWith('/') || !route ? `${route}index.html` : route}`;

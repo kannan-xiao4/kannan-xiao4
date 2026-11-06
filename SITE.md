@@ -12,13 +12,13 @@
 
 デザインは白地・青いリンク・システムのゴシック体を基本にしています。プロフィール画像とファビコンは、GitHubの公開プロフィール画像を保存した`site/assets/avatar.png`を使用します。GitHub側で画像を変更した場合は、このファイルも差し替えてください。
 
-全ページで上部の横並びヘッダーを共通で使用します。トップページのイラストは`site/assets/torimaru-hero.png`です。ユーザー提供のとりまるの画像をもとに生成し、プロンプトは`design/torimaru-hero.md`に保存しています。トップページの個人制作には、`site/projects.json`の新しいものを最大3件表示します。画像は`site/assets/games/`に保存し、`image`で指定してください。現在のゲーム画像はunityroom公開ページのカバー画像を使い、取得元は`imageSource`に記録しています。画像は外部サイトから毎回読み込まず、サイトと一緒に配信します。
+全ページで共通のヘッダーを使用し、スクロール時も画面上部に表示します。モバイルではホームに戻るプロフィールアイコンの右に、短いラベルでナビゲーションを1行表示します。外部リンク一覧は共通フッターから開けます。トップページのイラストは`site/assets/torimaru-hero.png`です。ユーザー提供のとりまるの画像をもとに生成し、プロンプトは`design/torimaru-hero.md`に保存しています。トップページの個人制作には、`site/projects.json`の新しいものを最大3件表示します。画像は`site/assets/games/`に保存し、`image`で指定してください。現在のゲーム画像はunityroom公開ページのカバー画像を使い、取得元は`imageSource`に記録しています。画像は外部サイトから毎回読み込まず、サイトと一緒に配信します。
 
 ## 制作物とソーシャルリンク
 
 `site/projects.json`には、タイトル・説明・カテゴリ・日付・GitHub URL・ゲームURLを保存します。GitHubの作成日を日本時間に変換した`date`を基本とし、unityroom投稿日を使う作品には`dateSource`で明記します。公開リポジトリを新しく追加したら、このファイルにも追記してください。ビルド時にGitHubから自動取得はしません。
 
-GitHub・X・LinkedInのURLは`site/config.json`の`links`、アイコンの対応は`socials`で管理します。GitHub・X・LinkedInは公式配布のブランドアイコン、RSSはMaterial Symbolsのフィード記号を使います。ヘッダー・フッターとブログのRSSリンクはアイコンだけを表示し、`aria-label`と`title`でリンク名を付けています。各素材の取得元は`site/assets/icons/NOTICE.md`、RSS記号のライセンスは同ディレクトリの`LICENSE.txt`を参照してください。
+GitHub・X・LinkedInのURLは`site/config.json`の`links`、アイコンの対応は`socials`で管理します。GitHub・X・LinkedInは公式配布のブランドアイコン、RSSはMaterial Symbolsのフィード記号を使います。共通のリンクアイコンはフッターに表示します。ブログ一覧にもRSSアイコンを表示し、`aria-label`と`title`でリンク名を付けています。各素材の取得元は`site/assets/icons/NOTICE.md`、RSS記号のライセンスは同ディレクトリの`LICENSE.txt`を参照してください。
 
 ## ブログの記事を追加する
 
