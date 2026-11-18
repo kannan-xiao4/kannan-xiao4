@@ -1104,21 +1104,6 @@
     }
   },
   {
-    "title": "黒猫の三角（Vシリーズ）",
-    "bookUrl": "https://www.shinchosha.co.jp/writer/3029/",
-    "isbn": "",
-    "cover": null,
-    "siteName": "新潮社",
-    "siteIcon": {
-      "file": "www.shinchosha.co.jp.png",
-      "source": "https://www.shinchosha.co.jp/favicon.ico"
-    },
-    "coverRights": {
-      "status": "not-confirmed",
-      "checkedAt": "2026-11-01"
-    }
-  },
-  {
     "title": "自分と社会をいい感じにする 仕事技芸論",
     "bookUrl": "https://mishimasha.com/books/9784911226407/",
     "isbn": "9784911226407",
@@ -1200,6 +1185,130 @@
     "coverRights": {
       "status": "not-confirmed",
       "checkedAt": "2026-11-01"
+    }
+  },
+  {
+    "title": "ChatGPT攻略",
+    "bookUrl": "https://www.kadokawa.co.jp/product/322305000325/",
+    "cover": null,
+    "siteName": "KADOKAWA",
+    "siteIcon": {
+      "file": "www.kadokawa.co.jp.png",
+      "source": "https://static.kadokawa.co.jp/common/img/favicon.ico"
+    }
+  },
+  {
+    "title": "シニアエンジニアリングリーダーのしごと",
+    "bookUrl": "https://www.oreilly.co.jp/books/9784814401680/",
+    "cover": null,
+    "siteName": "オライリー・ジャパン",
+    "siteIcon": {
+      "file": "www.oreilly.co.jp.png",
+      "source": "https://www.oreilly.co.jp/favicon.ico"
+    }
+  },
+  {
+    "title": "コンピュータグラフィックス［改訂新版］",
+    "bookUrl": "https://www.cgarts.or.jp/books_detail/ece_1/",
+    "cover": null,
+    "siteName": "CG-ARTS",
+    "siteIcon": null
+  },
+  {
+    "title": "アルゴリズム的思考力が身につく！ プログラミングコンテストAtCoder入門",
+    "bookUrl": "https://www.kadokawa.co.jp/product/321904000758/",
+    "cover": null,
+    "siteName": "KADOKAWA",
+    "siteIcon": {
+      "file": "www.kadokawa.co.jp.png",
+      "source": "https://static.kadokawa.co.jp/common/img/favicon.ico"
+    }
+  },
+  {
+    "title": "Vシリーズ",
+    "bookUrl": "https://kodanshabunko.com/morihiroshi/Vseries.html",
+    "cover": null,
+    "siteName": "講談社文庫",
+    "siteIcon": {
+      "file": "www.kodansha.co.jp.png",
+      "source": "https://www.kodansha.co.jp/favicon_ios.png"
+    }
+  },
+  {
+    "title": "30代を後悔しない50のリスト",
+    "bookUrl": "https://www.diamond.co.jp/book/9784478016619.html",
+    "cover": null,
+    "siteName": "ダイヤモンド社",
+    "siteIcon": {
+      "file": "www.diamond.co.jp.png",
+      "source": "https://www.diamond.co.jp/images/common/favicon.ico"
+    }
+  },
+  {
+    "title": "公正的戦闘規範",
+    "bookUrl": "https://www.hayakawa-online.co.jp/shop/g/g0000021290/",
+    "cover": null,
+    "siteName": "早川書房",
+    "siteIcon": {
+      "file": "www.hayakawa-online.co.jp.png",
+      "source": "https://www.hayakawa-online.co.jp/favicon.png"
+    }
+  },
+  {
+    "title": "勝間式生き方の知見",
+    "bookUrl": "https://www.kadokawa.co.jp/product/322102001393/",
+    "cover": null,
+    "siteName": "KADOKAWA",
+    "siteIcon": {
+      "file": "www.kadokawa.co.jp.png",
+      "source": "https://static.kadokawa.co.jp/common/img/favicon.ico"
+    }
+  },
+  {
+    "title": "ゲームプログラマになる前に覚えておきたい技術",
+    "bookUrl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000009916781",
+    "cover": null,
+    "siteName": "国立国会図書館サーチ",
+    "siteIcon": {
+      "file": "ndlsearch.ndl.go.jp.png",
+      "source": "https://ndlsearch.ndl.go.jp/assets/ndls/favicon/favicon.ico"
+    }
+  },
+  {
+    "title": "Site Reliability Engineering",
+    "bookUrl": "https://www.oreilly.co.jp/books/9784873117911/",
+    "cover": null,
+    "siteName": "オライリー・ジャパン",
+    "siteIcon": {
+      "file": "www.oreilly.co.jp.png",
+      "source": "https://www.oreilly.co.jp/favicon.ico"
+    }
+  },
+  {
+    "title": "THE TEAM 5つの法則",
+    "bookUrl": "https://www.gentosha.co.jp/book/detail/9784344034549/",
+    "cover": null,
+    "siteName": "幻冬舎",
+    "siteIcon": {
+      "file": "www.gentosha.co.jp.png",
+      "source": "https://www.gentosha.co.jp/favicon.ico"
+    }
+  },
+  {
+    "title": "普通の人々の戦い",
+    "bookUrl": "https://www.lib.pref.ibaraki.jp/licsxp-opac/WOpacTifTilDetailToKanRenDetailAction.do?kanrenflg=1&returnflg=&tilcodtmp=1003000517426",
+    "cover": null,
+    "siteName": "茨城県立図書館",
+    "siteIcon": null
+  },
+  {
+    "title": "プロダクトマネージャーのしごと 第2版",
+    "bookUrl": "https://www.oreilly.co.jp/books/9784814400430/",
+    "cover": null,
+    "siteName": "オライリー・ジャパン",
+    "siteIcon": {
+      "file": "www.oreilly.co.jp.png",
+      "source": "https://www.oreilly.co.jp/favicon.ico"
     }
   }
 ]
